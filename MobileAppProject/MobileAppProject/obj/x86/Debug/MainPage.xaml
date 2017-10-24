@@ -24,11 +24,13 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Border BorderBrush ="blue" BorderThickness="2"  Grid.ColumnSpan="4" Background="Beige">
-            <TextBlock HorizontalAlignment="Center" FontSize="30" Grid.ColumnSpan="4"  Width="376" Grid.RowSpan="2" Margin="-10,0,-10,-0.333">Welcome to Math Attack!</TextBlock>
+            <TextBlock HorizontalAlignment="Center" FontWeight="Bold" FontSize="30" Grid.ColumnSpan="4"  Width="376" Grid.RowSpan="2" Margin="-10,0,-10,-0.333">Welcome to Math Attack!</TextBlock>
         </Border>
-        <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" FontSize="20">Questions will Appear here</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20">Questions will Appear here</TextBlock>
         <TextBox x:ConnectionId='1' PlaceholderText="Enter answer here!"                                   FontSize="12"  Grid.Row="2" Grid.RowSpan="2" HorizontalAlignment="Center" MaxHeight ="70" MinWidth="200" Grid.ColumnSpan="4" RenderTransformOrigin="0.231,-0.471" Margin="84,53.333,76,0"/>
         <Button x:ConnectionId='2' x:Name="Enter" HorizontalAlignment="Center" Grid.Row="4"  Grid.Column="1" MinHeight="45"  MinWidth="152" RenderTransformOrigin="-1.996,0.522" Grid.ColumnSpan="2" Margin="14,37.667,14,10">Enter</Button>
+        <Button Grid.Row="5" Background="Green" Foreground="White">Start</Button>
+        <Button Grid.Row="5" Grid.Column="3" Background="Red" Foreground="white" HorizontalAlignment="Right">Stop</Button>
     </Grid>
 </Page>
 
