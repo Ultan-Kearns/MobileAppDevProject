@@ -24,15 +24,15 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Border BorderBrush ="blue" BorderThickness="2"  Grid.ColumnSpan="4" Background="Beige">
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="30" Grid.ColumnSpan="4"  Width="376" Grid.RowSpan="2" Margin="8,36,-28,0">Welcome to Math Attack!</TextBlock>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="30" Grid.ColumnSpan="4"  Width="350" Grid.RowSpan="2">Welcome to Math Attack!</TextBlock>
         </Border>
         <TextBlock x:ConnectionId='1' x:Name="timer" Grid.Row="1" Grid.Column="0" Height="107" Grid.RowSpan="2" VerticalAlignment="Bottom" Margin="0,0,49,0">Timer:</TextBlock>
         <TextBlock x:ConnectionId='2' x:Name="score" Grid.Row="1" Grid.Column="3" HorizontalAlignment= "Right" Height="107" Grid.RowSpan="2" VerticalAlignment="Bottom">Score:</TextBlock>
         <TextBlock x:ConnectionId='3' Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" x:Name="question">Questions will Appear here</TextBlock>
         <TextBox x:ConnectionId='4' PlaceholderText="Enter answer here!" x:Name ="answer" FontSize="12"  Grid.Row="2" Grid.RowSpan="2" HorizontalAlignment="Center" MaxHeight ="70" MinWidth="200" Grid.ColumnSpan="4" RenderTransformOrigin="0.231,-0.471" Margin="84,53.333,76,0"/>
         <Button x:ConnectionId='5' x:Name="Enter" HorizontalAlignment="Center" Grid.Row="4"  Grid.Column="1" MinHeight="45"  MinWidth="152" Grid.ColumnSpan="2"  VerticalAlignment="Stretch"                    >Enter</Button>
-        <Button x:ConnectionId='6' Grid.Row="5" Background="Green" Foreground="White" HorizontalAlignment="Left" x:Name="start"  Width="51"                    >Start</Button>
-        <Button x:ConnectionId='7' Grid.Row="5" Grid.Column="3" Background="Red" Foreground="white" HorizontalAlignment="Right" x:Name="stop" Margin="40,37.667,0,37" Width="50"                   >Stop</Button>
+        <Button x:ConnectionId='6' Grid.Row="5" Background="Green" Foreground="White" HorizontalAlignment="Left" x:Name="start"  Width="50"                    >Start</Button>
+        <Button x:ConnectionId='7' Grid.Row="5" Grid.Column="3" Background="Red" Foreground="white" HorizontalAlignment="Right" x:Name="stop" Width="50"                   >Stop</Button>
     </Grid>
 </Page>
 

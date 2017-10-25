@@ -28,9 +28,23 @@ namespace MobileAppProject
         char op;
         double a, b, result;
         int randOp, scoreApp = 0;
+
+        //stop button also gives feedback to user
         private void stop_Click(object sender, RoutedEventArgs e)
         {
             stopApp = true;
+            if(scoreApp > 0)
+            {
+                question.Text = "Nice job you got " + scoreApp + " right!";
+            }
+            else if(scoreApp < 0)
+            {
+                question.Text = "Sorry you got " + scoreApp + " Wrong but you can always improve!";
+            }
+            else
+            {
+                question.Text = "Are you even trying?";
+            }
         }
 
         String ans;
@@ -48,7 +62,7 @@ namespace MobileAppProject
             try
             {
                 //check if correect and increment or decrement score
-                if (result == Convert.ToInt32(ans)) 
+                if (result == Convert.ToDouble(ans)) 
                 {
                     scoreApp++;
                 }
@@ -86,7 +100,23 @@ namespace MobileAppProject
                     op = '-';
                     break;
                 case 3:
-                    result = a / b;
+                    //be nice to user and change division around if b > a
+                    if (a > b)
+                    {
+                        result = a / b;
+                    }
+                    else 
+                    {
+                        double temp = 0;
+                        a = temp;
+                        b = a;
+                        a = b;
+                    }
+                    //check for 0 and generate new random
+                    if (a == 0 || b == 0)
+                    {
+                        generate_Random();
+                    }
                     op = '/';
                     break;
                 case 4:
