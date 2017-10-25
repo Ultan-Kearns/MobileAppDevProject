@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Ul\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-10-25T11:44:53.870</Modified>
+      <Modified>2017-10-25T13:39:44.803</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Ul\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\bin\x86\Debug\MobileAppProject.exe">
       <PackagePath>entrypoint\MobileAppProject.exe</PackagePath>
-      <Modified>2017-10-25T11:44:53.407</Modified>
+      <Modified>2017-10-25T13:39:43.861</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ul\.nuget\packages\Microsoft.CSharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -535,7 +535,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ul\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\bin\x86\Debug\MobileAppProject.xr.xml">
       <PackagePath>MobileAppProject.xr.xml</PackagePath>
-      <Modified>2017-10-25T11:42:08.443</Modified>
+      <Modified>2017-10-25T13:39:43.637</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -544,11 +544,11 @@
     <AppxPackagedFile Include="C:\Users\Ul\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-10-25T11:42:09.367</Modified>
+      <Modified>2017-10-25T13:39:44.485</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ul\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\bin\x86\Debug\Core\MobileAppProject.exe">
       <PackagePath>MobileAppProject.exe</PackagePath>
-      <Modified>2017-10-25T11:44:53.858</Modified>
+      <Modified>2017-10-25T13:39:44.793</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -24,60 +24,89 @@ namespace MobileAppProject
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        Boolean stopApp = true, startApp = false, right;
+        Boolean stopApp = true;
         char op;
-        int a, b, result,randOp,scoreApp = 0;
+        double a, b, result;
+        int randOp, scoreApp = 0;
+        private void stop_Click(object sender, RoutedEventArgs e)
+        {
+            stopApp = true;
+        }
+
+        String ans;
 
         public MainPage()
         {
             this.InitializeComponent();
         }
-
-    
-
-        private void start_Click(object sender, RoutedEventArgs e)
+        
+        private void Enter_Click(object sender, RoutedEventArgs e)
         {
-            for(int i = 60; i < 0; i--)
+            //set string answer = user answer
+            ans = answer.Text; 
+            //try-catch to see if input is valid
+            try
             {
-                timer.Text = "Timer: " + i.ToString();
+                //check if correect and increment or decrement score
+                if (result == Convert.ToInt32(ans)) 
+                {
+                    scoreApp++;
+                }
+                else
+                {
+                    scoreApp--;
+                }
+                //change text of score
+                score.Text = "Score: " + scoreApp.ToString(); 
+                generate_Random();
+                question.Text = a.ToString() + op.ToString() + b.ToString();
+                answer.Text = "";
             }
+            catch
+            {
+                answer.Text = "invalid input";
+                question.Text = a.ToString() + op.ToString() + b.ToString();
+            }
+        }
+        public void generate_Random() 
+        {
+            //declare two new randoms between 0 and 100
+            Random rand = new Random(); 
+            a = rand.Next(0, 100);
+            b = rand.Next(0, 100);
+            randOp = rand.Next(1, 4);
+            switch (randOp) //switch so operator is also random
+            {
+                case 1:
+                    result = a + b;
+                    op = '+';
+                    break;
+                case 2:
+                    result = a - b;
+                    op = '-';
+                    break;
+                case 3:
+                    result = a / b;
+                    op = '/';
+                    break;
+                case 4:
+                    result = a * b;
+                    op = '*';
+                    break;
+                default:
+                    result = a + b;
+                    op = '+';
+                    break;
+            }
+        }
+        private void start_Click(object sender, RoutedEventArgs e)
+        { 
+            //loop until stopApp = true
             do
             {
-                Random rand = new Random();
-                a = rand.Next(0,100);
-                b = rand.Next(0, 100);
-                randOp = rand.Next(1, 4);
-                switch (randOp)
-                {
-                    case 1:
-                        op = '+';
-                        break;
-                    case 2:
-                        op = '-';
-                        break;
-                    case 3:
-                        op = '/';
-                        break;
-                    case 4:
-                        op = '*';
-                        break;
-                    default:
-                        op = '+';
-                        break;
-                }
-                result = a + (char)op + b;
-                question.Text = a.ToString() + op.ToString() + b.ToString();
-                if(Convert.ToInt32(answer) == result)
-                {
-                 
-                }
+               generate_Random();
+               question.Text = a.ToString() + op.ToString() + b.ToString();
             } while (stopApp != true);
-    }       
- 
-
-        private void score_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-
-        }
+        }   
     }
 }
