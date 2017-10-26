@@ -1,0 +1,1 @@
+C:\Users\Ul\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\MobileAppProject.csproj;x64

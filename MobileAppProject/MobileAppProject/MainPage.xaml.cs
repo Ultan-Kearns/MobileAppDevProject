@@ -28,7 +28,6 @@ namespace MobileAppProject
         char op;
         double a, b, result;
         int randOp, scoreApp = 0;
-
         //stop button also gives feedback to user
         private void stop_Click(object sender, RoutedEventArgs e)
         {
@@ -43,8 +42,9 @@ namespace MobileAppProject
             }
             else
             {
-                question.Text = "Are you even trying?";
+                question.Text = "\"To be fair, you have to have a very high IQ to understand Rick and Morty.\"";
             }
+            scoreApp = 0;
         }
 
         String ans;
@@ -52,8 +52,14 @@ namespace MobileAppProject
         public MainPage()
         {
             this.InitializeComponent();
+            score.Text += " 0";
         }
-        
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e) 
+        {
+
+        }
+
         private void Enter_Click(object sender, RoutedEventArgs e)
         {
             //set string answer = user answer
@@ -71,7 +77,7 @@ namespace MobileAppProject
                     scoreApp--;
                 }
                 //change text of score
-                score.Text = "Score: " + scoreApp.ToString(); 
+                score.Text = "score: " + scoreApp.ToString(); 
                 generate_Random();
                 question.Text = a.ToString() + op.ToString() + b.ToString();
                 answer.Text = "";
