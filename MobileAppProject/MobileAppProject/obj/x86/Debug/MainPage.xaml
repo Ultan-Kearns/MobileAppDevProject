@@ -23,8 +23,8 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Border BorderBrush ="blue" BorderThickness="2"  Grid.ColumnSpan="4" Background="Beige">
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="30" Grid.ColumnSpan="4"  Width="350" Grid.RowSpan="2">Welcome to Math Attack!</TextBlock>
+        <Border BorderBrush ="blue" BorderThickness="2"  Grid.ColumnSpan="4" Background="Beige" Margin="-10,-5,10,4.667" Height="107" VerticalAlignment="Bottom" RenderTransformOrigin="-0.251,0.08">
+            <TextBlock VerticalAlignment="Center" FontWeight="Bold" FontSize="30" Grid.ColumnSpan="4" Grid.RowSpan="2" Height="66" HorizontalAlignment="Right" Width="350">Welcome to Math Attack!</TextBlock>
         </Border>
         <TextBlock x:ConnectionId='1' x:Name="timer" Grid.Row="1" Grid.Column="0" Height="107" Grid.RowSpan="2" VerticalAlignment="Bottom" Margin="0,0,49,0">Timer:</TextBlock>
         <TextBlock x:ConnectionId='2' x:Name="score" Grid.Row="1" Grid.Column="3" HorizontalAlignment= "Right" Height="107" Grid.RowSpan="2" VerticalAlignment="Bottom">Score:</TextBlock>

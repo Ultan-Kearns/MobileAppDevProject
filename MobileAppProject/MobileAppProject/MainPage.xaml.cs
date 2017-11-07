@@ -25,12 +25,15 @@ namespace MobileAppProject
     public sealed partial class MainPage : Page
     {
         Boolean stopApp = true;
+        Boolean startApp = false;
         char op;
-        double a, b, result;
+        int a, b, result;
         int randOp, scoreApp = 0;
+
         //stop button also gives feedback to user
         private void stop_Click(object sender, RoutedEventArgs e)
         {
+            startApp = false;
             stopApp = true;
             if(scoreApp > 0)
             {
@@ -42,9 +45,8 @@ namespace MobileAppProject
             }
             else
             {
-                question.Text = "\"To be fair, you have to have a very high IQ to understand Rick and Morty.\"";
+                question.Text = "Sorry you got " + scoreApp + " keep trying";
             }
-            scoreApp = 0;
         }
 
         String ans;
@@ -52,49 +54,50 @@ namespace MobileAppProject
         public MainPage()
         {
             this.InitializeComponent();
-            score.Text += " 0";
         }
-
-        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e) 
-        {
-
-        }
-
+        
         private void Enter_Click(object sender, RoutedEventArgs e)
         {
-            //set string answer = user answer
-            ans = answer.Text; 
-            //try-catch to see if input is valid
-            try
+            if (startApp == true)
             {
-                //check if correect and increment or decrement score
-                if (result == Convert.ToDouble(ans)) 
+                //set string answer = user answer
+                ans = answer.Text;
+                //try-catch to see if input is valid
+                try
                 {
-                    scoreApp++;
+                    //check if correect and increment or decrement score
+                    if (result == Convert.ToDouble(ans))
+                    {
+                        scoreApp++;
+                    }
+                    else
+                    {
+                        scoreApp--;
+                    }
+                    //change text of score
+                    score.Text = "Score: " + scoreApp.ToString();
+                    generate_Random();
+                    question.Text = a.ToString() + op.ToString() + b.ToString();
+                    answer.Text = "";
                 }
-                else
+                catch
                 {
-                    scoreApp--;
+                    answer.Text = "invalid input";
+                    question.Text = a.ToString() + op.ToString() + b.ToString();
                 }
-                //change text of score
-                score.Text = "score: " + scoreApp.ToString(); 
-                generate_Random();
-                question.Text = a.ToString() + op.ToString() + b.ToString();
-                answer.Text = "";
             }
-            catch
+            else
             {
-                answer.Text = "invalid input";
-                question.Text = a.ToString() + op.ToString() + b.ToString();
+                question.Text = "App not started!";
             }
         }
         public void generate_Random() 
         {
             //declare two new randoms between 0 and 100
             Random rand = new Random(); 
-            a = rand.Next(0, 100);
-            b = rand.Next(0, 100);
-            randOp = rand.Next(1, 4);
+            a = rand.Next(1, 100);
+            b = rand.Next(1, 100); 
+            randOp = rand.Next(1,4);
             switch (randOp) //switch so operator is also random
             {
                 case 1:
@@ -106,23 +109,18 @@ namespace MobileAppProject
                     op = '-';
                     break;
                 case 3:
-                    //be nice to user and change division around if b > a
-                    if (a > b)
+                    //make sure numbers divide evenly
+                  while(a % b != 0 && b % a != 0) 
                     {
-                        result = a / b;
+                        a++;
                     }
-                    else 
+                    if (b > a)
                     {
-                        double temp = 0;
-                        a = temp;
-                        b = a;
+                        int temp = a;
                         a = b;
+                        b = temp;
                     }
-                    //check for 0 and generate new random
-                    if (a == 0 || b == 0)
-                    {
-                        generate_Random();
-                    }
+                    result = a / b;
                     op = '/';
                     break;
                 case 4:
@@ -136,13 +134,17 @@ namespace MobileAppProject
             }
         }
         private void start_Click(object sender, RoutedEventArgs e)
-        { 
+        {
             //loop until stopApp = true
-            do
+            if (startApp == false)
             {
-               generate_Random();
-               question.Text = a.ToString() + op.ToString() + b.ToString();
-            } while (stopApp != true);
+                do
+                {
+                    startApp = true;
+                    generate_Random();
+                    question.Text = a.ToString() + op.ToString() + b.ToString();
+                } while (stopApp != true);
+            }
         }   
     }
 }

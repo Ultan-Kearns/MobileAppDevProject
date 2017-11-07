@@ -40,9 +40,9 @@
       <RootProperty Name="Inlines" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="MinWidth" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="Width" />
-      <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="PlaceholderText" />
@@ -63,6 +63,14 @@
       <RootProperty Name="Foreground" />
       <RootProperty Name="Width" />
       <RootEvent Name="Click" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Pivot">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Items" />
+      <RootEvent Name="SelectionChanged" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.PivotItem">
+      <RootProperty Name="Header" />
     </RootType>
     <RootType FullName="MobileAppProject.MainPage" />
   </Roots.RootTypes>
