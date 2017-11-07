@@ -29,8 +29,7 @@
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="Background" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Height" />
+      <RootProperty Name="MinHeight" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="Child" />
@@ -64,6 +63,17 @@
       <RootProperty Name="Foreground" />
       <RootProperty Name="Width" />
       <RootEvent Name="Click" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="IsChecked" />
+      <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="MobileAppProject.MainPage" />
   </Roots.RootTypes>

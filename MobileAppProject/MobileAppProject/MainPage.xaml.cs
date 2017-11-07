@@ -55,7 +55,21 @@ namespace MobileAppProject
         {
             this.InitializeComponent();
         }
-        
+
+        private void med_Tapped(object sender, TappedRoutedEventArgs e)
+        { 
+        }
+
+        private void hard_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+
+        }
+
+        private void easy_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+
+        }
+
         private void Enter_Click(object sender, RoutedEventArgs e)
         {
             if (startApp == true)
