@@ -146,7 +146,6 @@ namespace MobileAppProject
                   while(a % b != 0 && b % a != 0) 
                     {
                         a++;
-                        b++;
                     }
                     if (b > a)
                     {
