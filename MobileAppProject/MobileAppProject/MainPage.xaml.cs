@@ -27,7 +27,9 @@ namespace MobileAppProject
         Boolean stopApp = true;
         Boolean startApp = false;
         char op;
-        int a, b, result,min = 40,max = 100, randOp, scoreApp = 0;
+        int a, b, result;
+        int randOp, scoreApp = 0;
+
         //stop button also gives feedback to user
         private void stop_Click(object sender, RoutedEventArgs e)
         {
@@ -35,7 +37,7 @@ namespace MobileAppProject
             stopApp = true;
             if(scoreApp > 0)
             {
-                question.Text = "Nice job you got " + scoreApp + " points!";
+                question.Text = "Nice job you got " + scoreApp + " right!";
             }
             else if(scoreApp < 0)
             {
@@ -55,27 +57,17 @@ namespace MobileAppProject
         }
 
         private void med_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            min = 40;
-            max = 500;
-            generate_Random();
-            question.Text = a.ToString() + op.ToString() + b.ToString();
+        { 
         }
 
         private void hard_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            min = 1000;
-            max = 100000;
-            generate_Random();
-            question.Text = a.ToString() + op.ToString() + b.ToString();
+
         }
 
         private void easy_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            min = 1;
-            max = 10;
-            generate_Random();
-            question.Text = a.ToString() + op.ToString() + b.ToString();
+
         }
 
         private void Enter_Click(object sender, RoutedEventArgs e)
@@ -88,20 +80,9 @@ namespace MobileAppProject
                 try
                 {
                     //check if correect and increment or decrement score
-                    if (result == Convert.ToInt32(ans))
+                    if (result == Convert.ToDouble(ans))
                     {
-                        if (min >= 40 && max <= 500)
-                        {
-                            scoreApp += 1 * 5;
-                        }
-                        else if (min >= 1000 && max <= 100000)
-                        {
-                            scoreApp += 1 * 10;
-                        }
-                        else
-                        {
-                            scoreApp++;
-                        }
+                        scoreApp++;
                     }
                     else
                     {
@@ -128,8 +109,8 @@ namespace MobileAppProject
         {
             //declare two new randoms between 0 and 100
             Random rand = new Random(); 
-            a = rand.Next(min,max);
-            b = rand.Next(min,max); 
+            a = rand.Next(1, 100);
+            b = rand.Next(1, 100); 
             randOp = rand.Next(1,4);
             switch (randOp) //switch so operator is also random
             {
@@ -174,7 +155,6 @@ namespace MobileAppProject
                 do
                 {
                     startApp = true;
-                    score.Text = "Score: " + scoreApp.ToString();
                     generate_Random();
                     question.Text = a.ToString() + op.ToString() + b.ToString();
                 } while (stopApp != true);
