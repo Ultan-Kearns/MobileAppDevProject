@@ -14,28 +14,39 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Threading;
 using System.Diagnostics;
-
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace MobileAppProject
 {
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// Mobile app development project by Ultan Kearns
     /// </summary>
+  
     public sealed partial class MainPage : Page
     {
         Boolean stopApp = true;
         Boolean startApp = false;
         char op;
-        int a, b, result,min = 40,max = 100, randOp, scoreApp = 0;
+        String highName;
+        int a, b, result,min = 40,max = 100, randOp, scoreApp = 0,highScore = 0;
+    
         //stop button also gives feedback to user
         private void stop_Click(object sender, RoutedEventArgs e)
         {
             startApp = false;
             stopApp = true;
             if(scoreApp > 0)
-            {
-                question.Text = "Nice job you got " + scoreApp + " points!";
+            { 
+                if(scoreApp > highScore)
+                {
+                    highScore = scoreApp;
+                    question.Text = "Congratulations you got the high score!\n Please enter your name below";
+                    TextBox name = new TextBox();
+                }
+                else
+                {
+                    question.Text = "Nice job you got " + scoreApp + " points!";
+                }
             }
             else if(scoreApp < 0)
             {
@@ -73,7 +84,7 @@ namespace MobileAppProject
         private void easy_Tapped(object sender, TappedRoutedEventArgs e)
         {
             min = 1;
-            max = 10;
+            max = 20;
             generate_Random();
             question.Text = a.ToString() + op.ToString() + b.ToString();
         }
@@ -172,11 +183,12 @@ namespace MobileAppProject
             if (startApp == false)
             {
                 do
-                {
+                { 
                     startApp = true;
                     score.Text = "Score: " + scoreApp.ToString();
                     generate_Random();
                     question.Text = a.ToString() + op.ToString() + b.ToString();
+                    
                 } while (stopApp != true);
             }
         }   

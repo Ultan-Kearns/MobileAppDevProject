@@ -35,11 +35,10 @@
       <RootProperty Name="Child" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="Inlines" />
-      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="Width" />

@@ -26,7 +26,6 @@
         <Border BorderBrush ="blue" BorderThickness="2"  Grid.ColumnSpan="4" Background="Beige" MinHeight="80" VerticalAlignment="Bottom" RenderTransformOrigin="-0.251,0.08">
             <TextBlock VerticalAlignment="Center" FontWeight="Bold" FontSize="30" Grid.ColumnSpan="4" Grid.RowSpan="2" Height="66" HorizontalAlignment="center" Width="350">Welcome to Math Attack!</TextBlock>
         </Border>
-        <TextBlock x:Name="timer" Grid.Row="1" Grid.Column="0" Height="107" Grid.RowSpan="2" VerticalAlignment="Bottom" Margin="0,0,49,0">Timer:</TextBlock>
         <TextBlock x:Name="score" Grid.Row="1" Grid.Column="3" HorizontalAlignment= "Right" Height="107" Grid.RowSpan="2" VerticalAlignment="Bottom">Score:</TextBlock>
         <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" x:Name="question">Questions will Appear here</TextBlock>
         <TextBox PlaceholderText="Enter answer here!" x:Name ="answer" FontSize="12"  Grid.Row="2" Grid.RowSpan="2" HorizontalAlignment="Center" MaxHeight ="70" MinWidth="200" Grid.ColumnSpan="4" RenderTransformOrigin="0.231,-0.471" Margin="84,53.333,76,0"/>
