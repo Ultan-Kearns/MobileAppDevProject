@@ -24,68 +24,68 @@ namespace MobileAppProject
   
     public sealed partial class MainPage : Page
     {
+        //declare global variables
         Boolean stopApp = true;
         Boolean startApp = false;
         char op;
-        String highName;
         int a, b, result,min = 40,max = 100, randOp, scoreApp = 0,highScore = 0;
     
         //stop button also gives feedback to user
         private void stop_Click(object sender, RoutedEventArgs e)
         {
-            startApp = false;
-            stopApp = true;
-            if(scoreApp > 0)
-            { 
-                if(scoreApp > highScore)
+            if (startApp == true)
+            {
+                startApp = false;
+                stopApp = true;
+                if (scoreApp > 0)
                 {
-                    highScore = scoreApp;
-                    question.Text = "Congratulations you got the high score!\n Please enter your name below";
-                    TextBox name = new TextBox();
+                    if (scoreApp > highScore)
+                    {
+                        highScore = scoreApp;
+                        question.Text = "Congratulations you got \nthe high score!\nPlease enter your name\nbelow";
+
+                    }
+                    else
+                    {
+                        question.Text = "Nice job you got " + scoreApp + " points!";
+                    }
                 }
                 else
                 {
-                    question.Text = "Nice job you got " + scoreApp + " points!";
+                    question.Text = "Sorry you got " + scoreApp + " Wrong";
                 }
-            }
-            else if(scoreApp < 0)
-            {
-                question.Text = "Sorry you got " + scoreApp + " Wrong but you can always improve!";
             }
             else
             {
-                question.Text = "Sorry you got " + scoreApp + " keep trying";
+                question.Text = "App not started!";
             }
         }
-
-        String ans;
-
         public MainPage()
         {
             this.InitializeComponent();
         }
 
-        private void med_Tapped(object sender, TappedRoutedEventArgs e)
+        private void Med_Tapped(object sender, TappedRoutedEventArgs e)
         {
             min = 40;
             max = 500;
-            generate_Random();
+            Generate_Random();
             question.Text = a.ToString() + op.ToString() + b.ToString();
         }
 
-        private void hard_Tapped(object sender, TappedRoutedEventArgs e)
+        private void Hard_Tapped(object sender, TappedRoutedEventArgs e)
         {
             min = 1000;
             max = 100000;
-            generate_Random();
+            Generate_Random();
             question.Text = a.ToString() + op.ToString() + b.ToString();
         }
 
-        private void easy_Tapped(object sender, TappedRoutedEventArgs e)
+        private void Easy_Tapped(object sender, TappedRoutedEventArgs e)
         {
             min = 1;
             max = 20;
-            generate_Random();
+            Generate_Random();
             question.Text = a.ToString() + op.ToString() + b.ToString();
         }
 
@@ -93,12 +93,13 @@ namespace MobileAppProject
         {
             if (startApp == true)
             {
+                String ans;
                 //set string answer = user answer
                 ans = answer.Text;
                 //try-catch to see if input is valid
                 try
                 {
-                    //check if correect and increment or decrement score
+                    //check if correect and increment or decrement score according to difficulty
                     if (result == Convert.ToInt32(ans))
                     {
                         if (min >= 40 && max <= 500)
@@ -120,7 +121,7 @@ namespace MobileAppProject
                     }
                     //change text of score
                     score.Text = "Score: " + scoreApp.ToString();
-                    generate_Random();
+                    Generate_Random();
                     question.Text = a.ToString() + op.ToString() + b.ToString();
                     answer.Text = "";
                 }
@@ -135,7 +136,7 @@ namespace MobileAppProject
                 question.Text = "App not started!";
             }
         }
-        public void generate_Random() 
+        public void Generate_Random() 
         {
             //declare two new randoms between 0 and 100
             Random rand = new Random(); 
@@ -179,14 +180,15 @@ namespace MobileAppProject
         }
         private void start_Click(object sender, RoutedEventArgs e)
         {
-            //loop until stopApp = true
+            //check to see if app already started
             if (startApp == false)
             {
+                //loop until stopApp = true
                 do
                 { 
                     startApp = true;
                     score.Text = "Score: " + scoreApp.ToString();
-                    generate_Random();
+                    Generate_Random();
                     question.Text = a.ToString() + op.ToString() + b.ToString();
                     
                 } while (stopApp != true);

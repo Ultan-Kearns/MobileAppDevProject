@@ -23,17 +23,17 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Border BorderBrush ="blue" BorderThickness="2"  Grid.ColumnSpan="4" Background="Beige" MinHeight="80" VerticalAlignment="Bottom" RenderTransformOrigin="-0.251,0.08">
-            <TextBlock VerticalAlignment="Center" FontWeight="Bold" FontSize="30" Grid.ColumnSpan="4" Grid.RowSpan="2" Height="66" HorizontalAlignment="center" Width="350">Welcome to Math Attack!</TextBlock>
+        <Border BorderBrush ="blue" BorderThickness="2"  Grid.ColumnSpan="4" Background="Beige" MinHeight="50" VerticalAlignment="Bottom">
+            <TextBlock VerticalAlignment="Center" FontWeight="Bold" FontSize="30" Grid.ColumnSpan="4" Grid.RowSpan="2" Height="40" HorizontalAlignment="center" Width="350">Welcome to Math Attack!</TextBlock>
         </Border>
         <TextBlock x:Name="score" Grid.Row="1" Grid.Column="3" HorizontalAlignment= "Right" Height="107" Grid.RowSpan="2" VerticalAlignment="Bottom">Score:</TextBlock>
-        <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" x:Name="question">Questions will Appear here</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="15" x:Name="question">Questions will Appear here</TextBlock>
         <TextBox PlaceholderText="Enter answer here!" x:Name ="answer" FontSize="12"  Grid.Row="2" Grid.RowSpan="2" HorizontalAlignment="Center" MaxHeight ="70" MinWidth="200" Grid.ColumnSpan="4" RenderTransformOrigin="0.231,-0.471" Margin="84,53.333,76,0"/>
         <Button x:Name="Enter" HorizontalAlignment="Center" Grid.Row="4"  Grid.Column="1" MinHeight="45"  MinWidth="152" Grid.ColumnSpan="2"  VerticalAlignment="Stretch" Click="Enter_Click">Enter</Button>
         <Button Grid.Row="5" Background="Green" Foreground="White" HorizontalAlignment="Left" x:Name="start"  Width="50" Click="start_Click">Start</Button>
         <Button Grid.Row="5" Grid.Column="3" Background="Red" Foreground="white" HorizontalAlignment="Right" x:Name="stop" Width="50" Click="stop_Click">Stop</Button>
-        <RadioButton HorizontalAlignment="Left" VerticalAlignment="Stretch" Content="hard" x:Name ="hard" Tapped="hard_Tapped"  Grid.Row="2" Grid.ColumnSpan="2" Background="red" Foreground="White" Height="50" Width="50"/>
-        <RadioButton HorizontalAlignment="Left" VerticalAlignment="Stretch" Content="medium" IsChecked="True"  x:Name ="med" Tapped="med_Tapped" Grid.Row="3" Background="Blue" Foreground="White" Height="50" Width="50"/>
-        <RadioButton HorizontalAlignment="Left" VerticalAlignment="Stretch" Content="easy" x:Name ="easy"  Tapped="easy_Tapped" Grid.Row="4" Grid.ColumnSpan="2" Background="green" Foreground="White" Height="50" Width="50"/>
+        <RadioButton HorizontalAlignment="Left" VerticalAlignment="Stretch" Content="hard" x:Name ="hard" Tapped="Hard_Tapped"  Grid.Row="2" Grid.ColumnSpan="2" Background="red" Foreground="White" Height="50" Width="50"/>
+        <RadioButton HorizontalAlignment="Left" VerticalAlignment="Stretch" Content="medium" IsChecked="True"  x:Name ="med" Tapped="Med_Tapped" Grid.Row="3" Background="Blue" Foreground="White" Height="50" Width="50"/>
+        <RadioButton HorizontalAlignment="Left" VerticalAlignment="Stretch" Content="easy" x:Name ="easy"  Tapped="Easy_Tapped" Grid.Row="4" Grid.ColumnSpan="2" Background="green" Foreground="White" Height="50" Width="50"/>
     </Grid>
 </Page>

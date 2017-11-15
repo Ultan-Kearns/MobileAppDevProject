@@ -31,7 +31,6 @@
       <RootProperty Name="Background" />
       <RootProperty Name="MinHeight" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="Child" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
