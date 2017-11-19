@@ -33,9 +33,8 @@ namespace MobileAppProject
         //stop button also gives feedback to user
         private void stop_Click(object sender, RoutedEventArgs e)
         {
-            startApp = false;
             stopApp = true;
-            if (scoreApp > 0)
+            if (scoreApp > 0s
             {
                 question.Text = "Nice job you got " + scoreApp + " points!";
             }
@@ -52,7 +51,7 @@ namespace MobileAppProject
                     if (scoreApp > highScore)
                     {
                         highScore = scoreApp;
-                        question.Text = "Congratulations you got \nthe high score!\nPlease enter your name\nbelow";
+                        question.Text = "Congratulations you got " + scoreApp + " right!";
 
                     }
                     else
@@ -84,8 +83,6 @@ namespace MobileAppProject
                 Generate_Random();
                 question.Text = a.ToString() + op.ToString() + b.ToString();
             }
-            Generate_Random();
-            question.Text = a.ToString() + op.ToString() + b.ToString();
         }
 
         private void Hard_Tapped(object sender, TappedRoutedEventArgs e)
@@ -97,8 +94,6 @@ namespace MobileAppProject
                 Generate_Random();
                 question.Text = a.ToString() + op.ToString() + b.ToString();
             }
-            Generate_Random();
-            question.Text = a.ToString() + op.ToString() + b.ToString();
         }
 
         private void Easy_Tapped(object sender, TappedRoutedEventArgs e)
@@ -110,9 +105,6 @@ namespace MobileAppProject
                 Generate_Random();
                 question.Text = a.ToString() + op.ToString() + b.ToString();
             }
-            max = 20;
-            Generate_Random();
-            question.Text = a.ToString() + op.ToString() + b.ToString();
         }
 
         private void Enter_Click(object sender, RoutedEventArgs e)
@@ -196,12 +188,6 @@ namespace MobileAppProject
                     while (a % b != 0)
                     {
                         a++;
-                    }
-                    if (b > a)
-                    {
-                        int temp = a;
-                        a = b;
-                        b = temp;
                     }
                     result = a / b;
                     op = '/';
