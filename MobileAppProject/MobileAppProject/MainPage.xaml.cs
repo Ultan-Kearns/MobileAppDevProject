@@ -14,12 +14,15 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Threading;
 using System.Diagnostics;
+using Windows.Storage;
+
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace MobileAppProject
 {
     /// <summary>
     /// Mobile app development project by Ultan Kearns
+    /// Simple arithmetic game which asks users to answer maths questions
     /// </summary>
 
     public sealed partial class MainPage : Page
@@ -28,13 +31,13 @@ namespace MobileAppProject
         Boolean stopApp = true;
         Boolean startApp = false;
         char op;
-        int a, b, result, min = 40, max = 100, randOp, scoreApp = 0, highScore = 0;
-
+        int a, b, result, min = 40, max = 100, randOp, scoreApp = 0, highScore;
+        ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
         //stop button also gives feedback to user
         private void stop_Click(object sender, RoutedEventArgs e)
         {
             stopApp = true;
-            if (scoreApp > 0s
+            if (scoreApp > 0)
             {
                 question.Text = "Nice job you got " + scoreApp + " points!";
             }
@@ -46,19 +49,23 @@ namespace MobileAppProject
             {
                 startApp = false;
                 stopApp = true;
+                //if score is positive
                 if (scoreApp > 0)
                 {
                     if (scoreApp > highScore)
                     {
                         highScore = scoreApp;
-                        question.Text = "Congratulations you got " + scoreApp + " right!";
-
+                        //store high score and inform user
+                        localSettings.Values["high"] = highScore;
+                        question.Text = "Congratulations you got " + scoreApp + " and the high score!";
+                        curHighScore.Text = "High score: " + localSettings.Values["high"].ToString();
                     }
                     else
                     {
                         question.Text = "Nice job you got " + scoreApp + " points!";
                     }
                 }
+                //else if negative
                 else
                 {
                     question.Text = "Sorry you got " + scoreApp + " Wrong";
@@ -72,6 +79,15 @@ namespace MobileAppProject
         public MainPage()
         {
             this.InitializeComponent();
+            //Set high score when app is initialized
+            if(localSettings.Values["high"] != null)
+            {
+                curHighScore.Text += localSettings.Values["high"].ToString();
+            }
+            else
+            {
+                curHighScore.Text = "No high scores yet!";
+            }
         }
 
         private void Med_Tapped(object sender, TappedRoutedEventArgs e)
@@ -171,7 +187,7 @@ namespace MobileAppProject
             Random rand = new Random();
             a = rand.Next(min, max);
             b = rand.Next(min, max);
-            randOp = rand.Next(1, 4);
+            randOp = 3;
             //switch so operator is also random
             switch (randOp)
             {
@@ -184,10 +200,16 @@ namespace MobileAppProject
                     op = '-';
                     break;
                 case 3:
-                    //make sure numbers divide evenly
-                    while (a % b != 0)
+                    //make sure numbers divide evenly and that answer is not 1
+                    while (a % b != 0 || a / b == 1)
                     {
                         a++;
+                    }
+                    if(b > a)
+                    {
+                        int temp = a;
+                        a = b;
+                        b = a;
                     }
                     result = a / b;
                     op = '/';

@@ -31,6 +31,7 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="Height" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="Child" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
@@ -44,7 +45,7 @@
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="MinWidth" />
-      <RootProperty Name="MinHeight" />
+      <RootProperty Name="Foreground" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="PlaceholderText" />
