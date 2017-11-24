@@ -7,7 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/Images/Background.jpeg"></ImageBrush>
+        </Grid.Background>
         <!--Row definition-->
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -26,15 +29,15 @@
         <Border BorderBrush ="blue" BorderThickness="2"  Grid.ColumnSpan="4" Background="Black" VerticalAlignment="Bottom" RenderTransformOrigin="0.502,-0.362" Height="70">
             <TextBlock FontWeight="Bold" FontSize="30" Grid.ColumnSpan="4" Grid.RowSpan="2" HorizontalAlignment="center" MinWidth="350" Height="40" VerticalAlignment="Top" Foreground="#FF8EFB0B">Welcome to Math Attack!</TextBlock>
         </Border>
-        <TextBlock x:Name="score" Grid.Row="1" Grid.Column="3" HorizontalAlignment= "Right" Height="107" Grid.RowSpan="2" VerticalAlignment="Bottom">Score:</TextBlock>
-        <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan= "2" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="17" FontWeight="ExtraBold" FontStretch="Normal" TextAlignment="Center" x:Name="question" Width="512" MinWidth="300">Questions will Appear here</TextBlock>
+        <TextBlock x:Name="score" Grid.Row="1" Grid.Column="3" HorizontalAlignment= "Right" Height="107" Grid.RowSpan="2" VerticalAlignment="Bottom" Foreground="White">Score:</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan= "2" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="17" FontWeight="ExtraBold" FontStretch="Normal" TextAlignment="Center" x:Name="question" Width="512" MinWidth="300" Foreground="White">Questions will Appear here</TextBlock>
         <TextBox PlaceholderText="Enter answer here!" x:Name ="answer" FontSize="12"  Grid.Row="2" Grid.RowSpan="2" HorizontalAlignment="Center" MaxHeight ="100" MinWidth="200" Grid.ColumnSpan="4" Margin="84,53.333,76,0"/>
-        <Button x:Name="Enter" HorizontalAlignment="Center" Grid.Row="4"  Grid.Column="1" Height="100" Width="200" Grid.ColumnSpan="2"  VerticalAlignment="Center" Click="Enter_Click">Enter</Button>
-        <Button Grid.Row="5" Background="Green" Foreground="White" HorizontalAlignment="Left" x:Name="start"  Width="50" Click="start_Click">Start</Button>
-        <Button Grid.Row="5" Grid.Column="3" Background="Red" Foreground="white" HorizontalAlignment="Right" x:Name="stop" Width="50" Click="stop_Click">Stop</Button>
-        <RadioButton HorizontalAlignment="Left" VerticalAlignment="Stretch" Content="hard" x:Name ="hard" Tapped="Hard_Tapped"  Grid.Row="2" Grid.ColumnSpan="2" Background="red" Foreground="White" Height="50" Width="50"/>
-        <RadioButton HorizontalAlignment="Left" VerticalAlignment="Stretch" Content="medium" IsChecked="True" x:Name ="med" Tapped="Med_Tapped" Grid.Row="3" Background="Blue" Foreground="White" Height="50" Width="50"/>
-        <RadioButton HorizontalAlignment="Left" VerticalAlignment="Stretch" Content="easy" x:Name ="easy"  Tapped="Easy_Tapped" Grid.Row="4" Grid.ColumnSpan="2" Background="green" Foreground="White" Height="50" Width="50"/>
-        <TextBlock x:Name="curHighScore" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="3">High Score:</TextBlock>
+        <Button x:Name="Enter" HorizontalAlignment="Center" Grid.Row="4"  Grid.Column="1" Height="100" Width="200" Grid.ColumnSpan="2"  VerticalAlignment="Center" Click="Enter_Click" Foreground="White" Background="#33000000" ToolTipService.ToolTip="Enter">Enter</Button>
+        <Button Grid.Row="5" Background="Green" Foreground="White" HorizontalAlignment="Left" x:Name="start"  Width="50" Click="start_Click" ToolTipService.ToolTip="Start">Start</Button>
+        <Button Grid.Row="5" Grid.Column="3" Background="Red" Foreground="white" HorizontalAlignment="Right" x:Name="stop" Width="50" Click="stop_Click" ToolTipService.ToolTip="Stop">Stop</Button>
+        <RadioButton HorizontalAlignment="Left" VerticalAlignment="Stretch" Content="Hard" x:Name ="hard" Tapped="Hard_Tapped"  Grid.Row="2" Grid.ColumnSpan="2" Background="red" Foreground="White" ToolTipService.ToolTip="Hard" Height="50" Width="50"/>
+        <RadioButton HorizontalAlignment="Left" VerticalAlignment="Stretch" Content="Medium" IsChecked="True" x:Name ="med" Tapped="Med_Tapped" Grid.Row="3" Background="Blue" Foreground="White" ToolTipService.ToolTip="Medium" Height="50" Width="50"/>
+        <RadioButton HorizontalAlignment="Left" VerticalAlignment="Stretch" Content="Easy" x:Name ="easy"  Tapped="Easy_Tapped" Grid.Row="4" Grid.ColumnSpan="2" Background="green" Foreground="White" ToolTipService.ToolTip="Easy" Height="50" Width="50"/>
+        <TextBlock x:Name="curHighScore" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="3" Foreground="White">High Score:</TextBlock>
     </Grid>
 </Page>

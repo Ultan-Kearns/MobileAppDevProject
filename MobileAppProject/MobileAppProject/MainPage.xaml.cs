@@ -68,7 +68,7 @@ namespace MobileAppProject
                 //else if negative
                 else
                 {
-                    question.Text = "Sorry you got " + scoreApp + " Wrong";
+                    question.Text = "Sorry you got " + scoreApp + " points";
                 }
             }
             else
@@ -115,7 +115,7 @@ namespace MobileAppProject
         private void Easy_Tapped(object sender, TappedRoutedEventArgs e)
         {
             min = 1;
-            max = 10;
+            max = 40;
             if (startApp == true)
             {
                 Generate_Random();
@@ -187,7 +187,7 @@ namespace MobileAppProject
             Random rand = new Random();
             a = rand.Next(min, max);
             b = rand.Next(min, max);
-            randOp = 3;
+            randOp = rand.Next(1,4);
             //switch so operator is also random
             switch (randOp)
             {
