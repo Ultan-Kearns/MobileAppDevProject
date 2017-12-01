@@ -424,7 +424,6 @@ C:\Users\Sl0th\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppPr
 C:\Users\Sl0th\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Sl0th\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Sl0th\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\obj\x86\Debug\ProjectArchitectures.txt
-C:\Users\ultan\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\obj\x86\Debug\MobileAppProject.csprojResolveAssemblyReference.cache
 C:\Users\ultan\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\obj\x86\Debug\App.g.i.cs
 C:\Users\ultan\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\obj\x86\Debug\App.g.cs
 C:\Users\ultan\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\obj\x86\Debug\MainPage.g.i.cs
@@ -637,3 +636,4 @@ C:\Users\ultan\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppPr
 C:\Users\ultan\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\ultan\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\ultan\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\ultan\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\bin\x86\Debug\Assets\Images\Background.jpeg

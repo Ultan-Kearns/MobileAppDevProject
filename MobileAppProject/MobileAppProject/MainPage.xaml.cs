@@ -138,11 +138,11 @@ namespace MobileAppProject
                     {
                         if (min >= 40 && max <= 500)
                         {
-                            scoreApp += 1 * 5;
+                            scoreApp += 5;
                         }
                         else if (min >= 1000 && max <= 100000)
                         {
-                            scoreApp += 1 * 10;
+                            scoreApp += 10;
                         }
                         else
                         {
@@ -165,7 +165,7 @@ namespace MobileAppProject
                         }
                     }
                     //change text of score
-                    score.Text = "Score: " + scoreApp.ToString();
+                    score.Text = "Your Score: " + scoreApp.ToString();
                     Generate_Random();
                     question.Text = a.ToString() + op.ToString() + b.ToString();
                     answer.Text = "";
@@ -229,7 +229,7 @@ namespace MobileAppProject
                 do
                 {
                     startApp = true;
-                    score.Text = "Score: " + scoreApp.ToString();
+                    score.Text = "Your Score: " + scoreApp.ToString();
                     Generate_Random();
                     question.Text = a.ToString() + op.ToString() + b.ToString();
 

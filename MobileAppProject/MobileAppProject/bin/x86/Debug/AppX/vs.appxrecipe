@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\ultan\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-11-24T10:33:39.817</Modified>
+      <Modified>2017-12-01T10:31:56.049</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\ultan\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\bin\x86\Debug\MobileAppProject.exe">
       <PackagePath>entrypoint\MobileAppProject.exe</PackagePath>
-      <Modified>2017-11-24T10:33:39.007</Modified>
+      <Modified>2017-12-01T10:31:55.254</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ultan\.nuget\packages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -510,7 +510,7 @@
     <AppxPackagedFile Include="C:\Users\ultan\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-11-22T22:45:18.840</Modified>
+      <Modified>2017-12-01T10:25:12.856</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ultan\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
@@ -539,7 +539,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ultan\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\bin\x86\Debug\MobileAppProject.xr.xml">
       <PackagePath>MobileAppProject.xr.xml</PackagePath>
-      <Modified>2017-11-24T10:33:38.768</Modified>
+      <Modified>2017-12-01T10:31:55.045</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -548,11 +548,11 @@
     <AppxPackagedFile Include="C:\Users\ultan\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-11-24T10:33:39.580</Modified>
+      <Modified>2017-12-01T10:31:55.834</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ultan\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\bin\x86\Debug\Core\MobileAppProject.exe">
       <PackagePath>MobileAppProject.exe</PackagePath>
-      <Modified>2017-11-24T10:33:39.806</Modified>
+      <Modified>2017-12-01T10:31:56.041</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
