@@ -75,6 +75,7 @@ namespace MobileAppProject
             {
                 question.Text = "App not started!";
             }
+            scoreApp = 0;
         }
         public MainPage()
         {
