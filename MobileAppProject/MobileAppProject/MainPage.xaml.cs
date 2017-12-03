@@ -75,6 +75,7 @@ namespace MobileAppProject
             {
                 question.Text = "App not started!";
             }
+            previousQuestion.Text = "Previous question and answer: ";
             scoreApp = 0;
         }
         public MainPage()
@@ -165,6 +166,7 @@ namespace MobileAppProject
                             scoreApp--;
                         }
                     }
+                    previousQuestion.Text = "Previous question and answer: " + a.ToString() + op.ToString() + b.ToString() + " = " + result;
                     //change text of score
                     score.Text = "Your Score: " + scoreApp.ToString();
                     Generate_Random();
@@ -173,8 +175,7 @@ namespace MobileAppProject
                 }
                 catch
                 {
-                    answer.Text = "invalid input";
-                    question.Text = a.ToString() + op.ToString() + b.ToString();
+                    question.Text = "invalid input please enter an integer\n" + a.ToString() + op.ToString() + b.ToString();
                 }
             }
             else
@@ -235,6 +236,10 @@ namespace MobileAppProject
                     question.Text = a.ToString() + op.ToString() + b.ToString();
 
                 } while (stopApp != true);
+            }
+            else
+            {
+                question.Text = "App already started!\n" + a.ToString() + op.ToString() + b.ToString();
             }
         }
     }

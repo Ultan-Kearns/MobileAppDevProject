@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Sl0th\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-12-02T23:17:56.693</Modified>
+      <Modified>2017-12-03T00:10:49.073</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Sl0th\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\bin\x86\Debug\MobileAppProject.exe">
       <PackagePath>entrypoint\MobileAppProject.exe</PackagePath>
-      <Modified>2017-12-02T23:17:55.686</Modified>
+      <Modified>2017-12-03T00:10:48.750</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sl0th\.nuget\packages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -548,11 +548,11 @@
     <AppxPackagedFile Include="C:\Users\Sl0th\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-12-02T23:17:56.465</Modified>
+      <Modified>2017-12-03T00:05:15.135</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sl0th\Documents\GitHub\MobileAppDevProject\MobileAppProject\MobileAppProject\bin\x86\Debug\Core\MobileAppProject.exe">
       <PackagePath>MobileAppProject.exe</PackagePath>
-      <Modified>2017-12-02T23:17:56.682</Modified>
+      <Modified>2017-12-03T00:10:49.061</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
