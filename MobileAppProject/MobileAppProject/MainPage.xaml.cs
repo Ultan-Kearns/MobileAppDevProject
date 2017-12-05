@@ -39,7 +39,7 @@ namespace MobileAppProject
             stopApp = true;
             if (scoreApp > 0)
             {
-                question.Text = "Nice job you got " + scoreApp + " points!";
+                question.Text = "Nice job you got " + scoreApp + " point(s)!";
             }
             else if (scoreApp <= 0)
             {
@@ -52,13 +52,30 @@ namespace MobileAppProject
                 //if score is positive
                 if (scoreApp > 0)
                 {
-                    if (scoreApp > highScore)
+
+                    if (scoreApp > highScore && hard.IsChecked == true)
+                    {
+                        highScore = scoreApp;
+                        //store high score and inform user
+                        localSettings.Values["hardHigh"] = highScore;
+                        question.Text = "Congratulations you got " + scoreApp + " and the difficult high score!";
+                        curDifficultHighScore.Text = "Difficult high score: " + localSettings.Values["hardHigh"].ToString();
+                    }
+                    else if (scoreApp > highScore && med.IsChecked == true)
                     {
                         highScore = scoreApp;
                         //store high score and inform user
                         localSettings.Values["high"] = highScore;
-                        question.Text = "Congratulations you got " + scoreApp + " and the high score!";
-                        curHighScore.Text = "High score: " + localSettings.Values["high"].ToString();
+                        question.Text = "Congratulations you got " + scoreApp + " and the medium high score!\nNow try difficult!";
+                        curHighScore.Text = "Medium high score: " + localSettings.Values["high"].ToString();
+                    }
+                    else if (scoreApp > highScore && easy.IsChecked == true)
+                    {
+                        highScore = scoreApp;
+                        //store high score and inform user
+                        localSettings.Values["easyHigh"] = highScore;
+                        question.Text = "Congratulations you got " + scoreApp + " and the easy high score!\nNow try medium!";
+                        curEasyHighScore.Text = "Easy high score: " + localSettings.Values["easyHigh"].ToString();
                     }
                     else
                     {
@@ -90,6 +107,22 @@ namespace MobileAppProject
             {
                 curHighScore.Text = "No high scores yet!";
             }
+            if (localSettings.Values["easyHigh"] != null)
+            {
+                curEasyHighScore.Text += localSettings.Values["easyHigh"].ToString();
+            }
+            else
+            {
+                curEasyHighScore.Text = "No high scores yet!";
+            }
+            if (localSettings.Values["hardHigh"] != null)
+            {
+                curDifficultHighScore.Text += localSettings.Values["hardHigh"].ToString();
+            }
+            else
+            {
+                curDifficultHighScore.Text = "No high scores yet!";
+            }
         }
 
         private void Med_Tapped(object sender, TappedRoutedEventArgs e)
@@ -101,6 +134,13 @@ namespace MobileAppProject
                 Generate_Random();
                 question.Text = a.ToString() + op.ToString() + b.ToString();
             }
+            if (scoreApp > 0)
+            { 
+                question.Text += "\nDifficulty changed resetting score to 0";
+                scoreApp = 0;
+                score.Text = "Your Score: " + scoreApp.ToString();  
+            }
+
         }
 
         private void Hard_Tapped(object sender, TappedRoutedEventArgs e)
@@ -112,6 +152,12 @@ namespace MobileAppProject
                 Generate_Random();
                 question.Text = a.ToString() + op.ToString() + b.ToString();
             }
+            if (scoreApp > 0)
+            {
+                question.Text += "\nDifficulty changed resetting score to 0";
+                scoreApp = 0;
+                score.Text = "Your Score: " + scoreApp.ToString();
+            }
         }
 
         private void Easy_Tapped(object sender, TappedRoutedEventArgs e)
@@ -122,6 +168,12 @@ namespace MobileAppProject
             {
                 Generate_Random();
                 question.Text = a.ToString() + op.ToString() + b.ToString();
+            }
+            if (scoreApp > 0)
+            {
+               question.Text += "\nDifficulty changed resetting score to 0";
+               scoreApp = 0;
+               score.Text = "Your Score: " + scoreApp.ToString();
             }
         }
 
@@ -244,6 +296,3 @@ namespace MobileAppProject
         }
     }
 }
-
-
-
