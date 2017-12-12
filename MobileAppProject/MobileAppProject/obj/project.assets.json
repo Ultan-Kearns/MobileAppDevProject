@@ -18422,7 +18422,7 @@
       ]
     },
     "Microsoft.NETCore.UniversalWindowsPlatform/6.0.2": {
-      "sha512": "1x37WPEc/7G4BedFtmSKCK9E1wVWm0BTgTBe7lv/LuN/5a48H8KpGLO5I0fmX51y5r/BXJNaLjpfDkH1i1j0rQ==",
+      "sha512": "7bSAODFSTYt1G3/mjyh9e5HufYQQL2GKbQzDiBTdIdHWAI1Y2jet4dSCuS22gC0I9///kV3Cmnwud/UtMPCKeg==",
       "type": "package",
       "path": "microsoft.netcore.universalwindowsplatform/6.0.2",
       "files": [
@@ -25729,20 +25729,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ultan\\.nuget\\packages\\": {}
+    "C:\\Users\\Sl0th\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ultan\\Documents\\GitHub\\MobileAppDevProject\\MobileAppProject\\MobileAppProject\\MobileAppProject.csproj",
+      "projectUniqueName": "C:\\Users\\Sl0th\\Documents\\GitHub\\MobileAppDevProject\\MobileAppProject\\MobileAppProject\\MobileAppProject.csproj",
       "projectName": "MobileAppProject",
-      "projectPath": "C:\\Users\\ultan\\Documents\\GitHub\\MobileAppDevProject\\MobileAppProject\\MobileAppProject\\MobileAppProject.csproj",
-      "packagesPath": "C:\\Users\\ultan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ultan\\Documents\\GitHub\\MobileAppDevProject\\MobileAppProject\\MobileAppProject\\obj\\",
+      "projectPath": "C:\\Users\\Sl0th\\Documents\\GitHub\\MobileAppDevProject\\MobileAppProject\\MobileAppProject\\MobileAppProject.csproj",
+      "packagesPath": "C:\\Users\\Sl0th\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Sl0th\\Documents\\GitHub\\MobileAppDevProject\\MobileAppProject\\MobileAppProject\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\ultan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Sl0th\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

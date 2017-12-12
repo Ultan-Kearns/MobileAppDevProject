@@ -31,7 +31,7 @@ namespace MobileAppProject
         Boolean stopApp = true;
         Boolean startApp = false;
         char op;
-        int a, b, result, min = 40, max = 100, randOp, scoreApp = 0, highScore, previous;
+        int a, b, result, min = 40, max = 100, randOp, scoreApp = 0, highScore;
         ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
         //stop button also gives feedback to user
         private void stop_Click(object sender, RoutedEventArgs e)
@@ -133,17 +133,12 @@ namespace MobileAppProject
             {
                 Generate_Random();
                 question.Text = a.ToString() + op.ToString() + b.ToString();
-                previous = 1;
             }
-            if (scoreApp != 0 && previous != 1)
+            if (scoreApp != 0)
             { 
                 question.Text += "\nDifficulty changed resetting score to 0";
                 scoreApp = 0;
                 score.Text = "Your Score: " + scoreApp.ToString();  
-            }
-            else
-            {
-                question.Text = a.ToString() + op.ToString() + b.ToString() + "\nDifficulty already on medium";
             }
         }
 
@@ -155,17 +150,12 @@ namespace MobileAppProject
             {
                 Generate_Random();
                 question.Text = a.ToString() + op.ToString() + b.ToString();
-                previous = 2;
             }
-            if (scoreApp != 0 && previous != 2)
+            if (scoreApp != 0)
             {
                 question.Text += "\nDifficulty changed resetting score to 0";
                 scoreApp = 0;
                 score.Text = "Your Score: " + scoreApp.ToString();
-            }
-            else
-            {
-                question.Text = a.ToString() + op.ToString() + b.ToString() + "\nDifficulty already on difficult";
             }
         }
 
@@ -177,17 +167,12 @@ namespace MobileAppProject
             {
                 Generate_Random();
                 question.Text = a.ToString() + op.ToString() + b.ToString();
-                previous = 0;
             }
-            if (scoreApp != 0 && previous != 0)
+            if (scoreApp != 0)
             {
                question.Text += "\nDifficulty changed resetting score to 0";
                scoreApp = 0;
                score.Text = "Your Score: " + scoreApp.ToString();
-            }
-            else
-            {
-                question.Text = a.ToString() + op.ToString() + b.ToString() + "\nDifficulty already on easy";
             }
         }
 
